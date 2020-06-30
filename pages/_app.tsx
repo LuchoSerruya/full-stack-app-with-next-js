@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import "../styles.css";
 import { Fragment } from "react";
 

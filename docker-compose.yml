@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  pg:
+    image: "postgres:alpine"
+    container_name: "next-db"
+    env_file:
+      - ".env"
+    ports:
+      - "5555:5432"
+    volumes:
+      - "pg:/var/lib/postgresql/data"
+    restart: "always"
+volumes:
+  pg:

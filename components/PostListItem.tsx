@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Post } from "../models/post.model";
 type Props = {
   post: Post;
 };

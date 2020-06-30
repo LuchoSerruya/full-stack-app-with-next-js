@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { PostListItem } from "./PostListItem";
+import { Post } from "../models/post.model";
 
 type Props = {
   posts: Post[];
