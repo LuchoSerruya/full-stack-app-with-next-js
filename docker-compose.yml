@@ -1,5 +1,18 @@
 version: '3.8'
 services:
+  app:
+    build: 
+      context: .
+    env_file: 
+      - ".env"
+    environment: 
+      - POSTGRES_HOST=pg
+      - POSTGRES_PORT=5432
+    depends_on: 
+      - pg
+    ports:
+      - "9999:8080"
+      
   pg:
     image: "postgres:alpine"
     container_name: "next-db"
