@@ -1,12 +1,12 @@
 import { Post } from "../models/post.model";
-import { getConnection, createConnection } from "typeorm";
+import { getConnection, createConnection, Connection } from "typeorm";
 
-export async function getOrCreateConnection() {
+export async function getOrCreateConnection(): Promise<Connection> {
   try {
     const conn = getConnection();
     return conn;
   } catch (e) {
-    createConnection({
+    return createConnection({
       type: "postgres",
       host: process.env.POSTGRES_HOST as string,
       port: parseInt(process.env.POSTGRES_PORT as string),
