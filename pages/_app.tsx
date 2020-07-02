@@ -17,6 +17,16 @@ export default function MyApp({ Component, pageProps }) {
                 About
               </a>
             </li>
+            <ul className="flex justify-between items-center space-x-4">
+              <li>
+                <a
+                  href="/post/new"
+                  className="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline no-underline"
+                >
+                  Add
+                </a>
+              </li>
+            </ul>
           </ul>
         </nav>
       </header>
