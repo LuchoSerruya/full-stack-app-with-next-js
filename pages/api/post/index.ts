@@ -15,7 +15,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       post.body = data.body;
       post.title = data.title;
       post.id = (await postRepo.count()) + 1;
+      console.log(`POST ID ${post.id}`);
+
       const newPost = await postRepo.save(post);
+
+      const count = await postRepo.count();
+      console.log(`POST COUNT ${count}`);
 
       return res.status(201).json({ status: "Success", data: newPost });
     } catch (error) {
