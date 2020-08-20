@@ -1,3 +1,8 @@
+Demo app created for a [series of articles](https://collectednotes.com/lucianoserruyaaloisi/building-a-full-stack-app-with-next-js) on building a full-stack application with Next.js and PostgreSQL
+
+---
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
